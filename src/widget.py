@@ -1,7 +1,9 @@
-from masks import get_mask_account, get_mask_card_number
+from win32ctypes.pywin32.pywintypes import datetime
+
+from src.masks import get_mask_account, get_mask_card_number
 
 
-def mask_account_card(info_user: str) -> str:
+def mask_account_card(info_user):
     """Функция обработки введенных данных Счет или Карта
     и вывода замаскированной информации"""
     user_card = get_mask_card_number(info_user)
@@ -12,6 +14,12 @@ def mask_account_card(info_user: str) -> str:
         return user_card
 
 
-def get_date(line_date: str) -> str:
+def get_date(line_date):
     """Функция возврата времени в формате ДД.ММ.ГГГГ"""
-    return f"{line_date[8:10]}.{line_date[5:7]}.{line_date[0:4]}"
+    if not line_date.strip():  # Проверка на пустой ввод
+        return "Дата отсутствует"
+    try:
+        data_in = datetime.fromisoformat(line_date)
+        return data_in.strftime("%d.%m.%Y")
+    except ValueError:
+        return "Недопустимый формат даты"
