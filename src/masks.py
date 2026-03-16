@@ -1,4 +1,4 @@
-def get_mask_card_number(number_card):
+def get_mask_card_number(number_card: str) -> str:
     """Функция скрытие номера карты"""
     if len(number_card) < 16:
         return "Введен некоректный номер карты\n"
@@ -6,7 +6,7 @@ def get_mask_card_number(number_card):
     return card_mask
 
 
-def get_mask_account(account_number):
+def get_mask_account(account_number: str) -> str:
     """Функция скрытия номера счета"""
     if len(account_number) < 20 or "Счет" not in account_number:
         return "Введен некоректный номер счета\n"
