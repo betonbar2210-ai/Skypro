@@ -28,3 +28,5 @@ def test_card_number_generator():
     assert next(result) == "0000 0000 0000 1234"
     assert next(result) == "0000 0000 0000 1235"
     assert next(result) == "0000 0000 0000 1236"
+    non_result = card_number_generator(12, 10)
+    assert next(non_result, 'Не верный диапозон') == 'Не верный диапозон'
