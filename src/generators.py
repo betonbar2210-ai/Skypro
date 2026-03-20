@@ -7,3 +7,10 @@ def filter_by_currency(transactions: list, currency: str) -> Iterator[dict]:
     for transaction in transactions:
         if transaction.get("operationAmount", {}).get("currency", {}).get("code") == currency:
             yield transaction
+
+def transaction_descriptions(transactions: list) -> Iterator[str]:
+    """генератор, принимает список словарей с транзакциями
+    и возвращает описание каждой операции по очереди"""
+    for transaction in transactions:
+        if transaction.get("description"):
+            yield transaction["description"]

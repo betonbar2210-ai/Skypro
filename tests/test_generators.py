@@ -1,4 +1,4 @@
-from src.generators import filter_by_currency
+from src.generators import filter_by_currency, transaction_descriptions
 
 
 def test_filter_by_currency(test_transactions):
@@ -14,3 +14,10 @@ def test_filter_by_currency(test_transactions):
     }
     result_non = filter_by_currency(test_transactions, "")
     assert next(result_non, "валюта не найдена") == "валюта не найдена"
+
+
+def test_transaction_descriptions(test_transactions):
+    generator = transaction_descriptions(test_transactions)
+    assert next(generator) == "Перевод организации"
+    assert next(generator) == "Перевод со счета на счет"
+    assert next(generator) == "Перевод со счета на счет"
