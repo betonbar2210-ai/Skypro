@@ -3,7 +3,7 @@ from src.generators import filter_by_currency, transaction_descriptions, card_nu
 
 def test_filter_by_currency(test_transactions):
     result = filter_by_currency(test_transactions, "RUB")
-    assert next(result, "валюта не найдена") == {
+    assert next(result) == {
         "id": 873106923,
         "state": "EXECUTED",
         "date": "2019-03-23T01:09:46.296404",
@@ -17,7 +17,7 @@ def test_filter_by_currency(test_transactions):
 
 
 def test_transaction_descriptions(test_transactions):
-    generator = transaction_descriptions(test_transactions)
+    generator = transaction_descriptions(test_transactions, "description")
     assert next(generator) == "Перевод организации"
     assert next(generator) == "Перевод со счета на счет"
     assert next(generator) == "Перевод со счета на счет"
