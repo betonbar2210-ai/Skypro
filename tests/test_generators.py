@@ -1,3 +1,5 @@
+import pytest
+
 from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
 
 
@@ -23,10 +25,9 @@ def test_transaction_descriptions(test_transactions):
     assert next(generator) == "Перевод со счета на счет"
 
 
-def test_card_number_generator():
-    result = card_number_generator(1234, 1236)
-    assert next(result) == "0000 0000 0000 1234"
-    assert next(result) == "0000 0000 0000 1235"
-    assert next(result) == "0000 0000 0000 1236"
-    non_result = card_number_generator(12, 10)
-    assert next(non_result, 'Не верный диапозон') == 'Не верный диапозон'
+@pytest.mark.parametrize('beginning, stop, correct_card',
+                         [(1, 2, ['0000 0000 0000 0001', '0000 0000 0000 0002'])
+                          ])
+def test_card_number_generator(beginning, stop, correct_card):
+    result = list(card_number_generator(beginning, stop))
+    assert result == correct_card
