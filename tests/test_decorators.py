@@ -11,7 +11,6 @@ def log_in_file_error(bool):
 def test_log_in_file_error(capsys):
     with pytest.raises(Exception):
         log_in_file_error(bool=True)
-
     captured = capsys.readouterr()
     assert captured.out == ""
 
@@ -50,11 +49,7 @@ def test_log_in_concol_error(capsys):
     result = add_numbers(5, 8)
     assert result == 13
 
-    result = add_numbers(5, 8)
-    assert result == 13
-
     captured = capsys.readouterr()
-
     assert "Функция add_numbers оk:" in captured.out
     assert "Результат:\n13" in captured.out
     assert captured.err == ""
