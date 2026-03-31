@@ -24,11 +24,11 @@ def transaction_withdrawal(id_transaction: int) -> float:
     for i in transaction:
         try:
             if i['id'] == id_transaction and i['operationAmount']['currency']['code'] == 'RUB':
-                return i['operationAmount']['amount']
+                return f"Сумма покупки {i['operationAmount']['amount']} руб."
             elif i['id'] == id_transaction and i['operationAmount']['currency']['code'] != 'RUB':
                 code = i['operationAmount']['currency']['code']
                 amount = i['operationAmount']['amount']
                 total = conversion(code, amount)
-                return round(total['conversion_result'], 2)
+                return f"Сумма покупки {round(total['conversion_result'], 2)} руб."
         except KeyError:
             return 'id не найден'

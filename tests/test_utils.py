@@ -23,3 +23,6 @@ def test_read_json_except():
            assert read_json() == []
 
 
+def test_transaction_withdrawal_usd()
+
+
