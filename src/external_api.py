@@ -6,16 +6,16 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv('API_KEY')
 
+import os
+import requests
+from dotenv import load_dotenv
+
+
+load_dotenv()
+api_key = os.getenv('API_KEY')
+
 def conversion(code, amount):
-    """Функция конвертации суммы покупки иностранной валюты в рубли"""
-    url = f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from={code}&amount={amount}"
-
-    payload = {}
-    headers = {
-        "apikey": f"{api_key}"
-    }
-
-    response = requests.request("GET", url, headers=headers, data=payload)
-
+    url = f"https://v6.exchangerate-api.com/v6/{api_key}/pair/{code}/RUB/{amount}"
+    response = requests.get(url)
     result = response.json()
     return result

@@ -29,6 +29,6 @@ def transaction_withdrawal(id_transaction: int) -> float:
                 code = i['operationAmount']['currency']['code']
                 amount = i['operationAmount']['amount']
                 total = conversion(code, amount)
-                return round(total['result'], 2)
+                return round(total['conversion_result'], 2)
         except KeyError:
             print('id не найден')
