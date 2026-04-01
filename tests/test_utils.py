@@ -2,12 +2,8 @@ import json
 import os
 from unittest.mock import Mock, patch
 
-from src.external_api import conversion
-from src.utils import transaction_withdrawal
 from config import ROOT_DIR
-
-
-from src.utils import read_json
+from src.utils import read_json, transaction_withdrawal
 
 
 def test_read_json_try(utils_json):
@@ -18,16 +14,13 @@ def test_read_json_try(utils_json):
 
 
 def test_transaction_withdrawal_rub(test_rub):
-    assert transaction_withdrawal(test_rub) == '31957.58'
+    assert transaction_withdrawal(test_rub) == "31957.58"
 
 
-@patch('src.utils.conversion')
+@patch("src.utils.conversion")
 def test_transaction_withdrawal_usd(mock_usd, test_usd):
-    mock_usd.return_value = {"conversion_result" : 56.21}
+    mock_usd.return_value = {"conversion_result": 56.21}
     assert transaction_withdrawal(test_usd) == 56.21
-
-
-
 
 
 def test_read_json_except():
