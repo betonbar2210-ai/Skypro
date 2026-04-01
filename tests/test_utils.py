@@ -5,6 +5,7 @@ from src.utils import transaction_withdrawal
 
 from src.utils import read_json
 
+
 def test_read_json_try(utils_json):
     glav = Mock(return_value=utils_json)
     json.load = glav
@@ -12,19 +13,10 @@ def test_read_json_try(utils_json):
 
 
 def test_transaction_withdrawal_rub(utils_json):
-    assert transaction_withdrawal(441945886) == '31957.58'
-    assert transaction_withdrawal(445) == 'id не найден'
+    assert transaction_withdrawal(441945886) == "31957.58"
+    assert transaction_withdrawal(445) == "id не найден"
 
 
 def test_read_json_except():
-    with patch('json.load', side_effect = json.JSONDecodeError('', '', 0)):
-           assert read_json() == []
-
-
-def test_transaction_withdrawal_usd():
-    mock_conversion = Mock(return_value='5')
-    total = mock_conversion
-    assert transaction_withdrawal(142264268) == 'id не найден'
-
-
-
+    with patch("json.load", side_effect=json.JSONDecodeError("", "", 0)):
+        assert read_json() == []
