@@ -1,9 +1,7 @@
 import json
 from unittest.mock import Mock, patch
 from src.utils import transaction_withdrawal
-from src.external_api import conversion
 
-import pytest
 
 from src.utils import read_json
 
@@ -23,6 +21,10 @@ def test_read_json_except():
            assert read_json() == []
 
 
-def test_transaction_withdrawal_usd()
+def test_transaction_withdrawal_usd():
+    mock_conversion = Mock(return_value='5')
+    total = mock_conversion
+    assert transaction_withdrawal(142264268) == 'id не найден'
+
 
 

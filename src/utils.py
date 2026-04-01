@@ -19,16 +19,16 @@ def read_json():
 transaction = read_json()
 def transaction_withdrawal(id_transaction: int) -> float:
     """Функция вывода сумму покупки по транзакции в рублях
-        если валюта не рубли идет конвертация через API запрос https://marketplace.apilayer.com"""
+        если валюта не рубли идет конвертация через API запрос https://app.exchangerate-api.com/dashboard/confirmed"""
 
     for i in transaction:
         try:
             if i['id'] == id_transaction and i['operationAmount']['currency']['code'] == 'RUB':
-                return f"Сумма покупки {i['operationAmount']['amount']} руб."
+                return i['operationAmount']['amount']
             elif i['id'] == id_transaction and i['operationAmount']['currency']['code'] != 'RUB':
                 code = i['operationAmount']['currency']['code']
                 amount = i['operationAmount']['amount']
                 total = conversion(code, amount)
-                return f"Сумма покупки {round(total['conversion_result'], 2)} руб."
+                return round(total['conversion_result'], 2)
         except KeyError:
             return 'id не найден'
