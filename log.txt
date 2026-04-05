@@ -1,0 +1,198 @@
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.0013580322265625e-05
+
+Функция add_numbers оk:
+Время выполнения: 7.62939453125e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 9.298324584960938e-06
+
+Функция add_numbers оk:
+Время выполнения: 6.67572021484375e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 9.775161743164062e-06
+
+Функция add_numbers оk:
+Время выполнения: 6.4373016357421875e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.6927719116210938e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.3828277587890625e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 9.775161743164062e-06
+
+Функция add_numbers оk:
+Время выполнения: 5.9604644775390625e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.71661376953125e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.430511474609375e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.6689300537109375e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.4781951904296875e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.621246337890625e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.4543533325195312e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.7642974853515625e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.52587890625e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.5735626220703125e-05
+
+Функция add_numbers оk:
+Время выполнения: 6.67572021484375e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 9.298324584960938e-06
+
+Функция add_numbers оk:
+Время выполнения: 6.198883056640625e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.6927719116210938e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.4781951904296875e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.0013580322265625e-05
+
+Функция add_numbers оk:
+Время выполнения: 6.198883056640625e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.049041748046875e-05
+
+Функция add_numbers оk:
+Время выполнения: 6.4373016357421875e-06
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 2.288818359375e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.430511474609375e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 3.933906555175781e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.3589859008789062e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 1.5735626220703125e-05
+
+Функция add_numbers оk:
+Время выполнения: 1.5735626220703125e-05
+Результат:
+13
+
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 7.224082946777344e-05
+
+Функция add_numbers оk:
+Время выполнения: 0.00016641616821289062
+Результат:
+13
+
