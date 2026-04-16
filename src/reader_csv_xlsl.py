@@ -17,4 +17,5 @@ def reader_csv(way_csv):
 def reader_excel(way_excel):
     """Функция чтения EXCEL файла с помощью pandas"""
     data_excel = pd.read_excel(way_excel)
-    return data_excel
+    data = data_excel.to_dict('records')
+    return data

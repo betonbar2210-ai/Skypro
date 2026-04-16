@@ -15,5 +15,5 @@ def test_reader_csv(test_csv):
 
 @patch("pandas.read_excel")
 def test_reader_excel(mock_excel, test_excel):
-    mock_excel.return_value = test_excel
-    assert reader_excel("").to_dict() == test_excel.to_dict()
+    mock_excel.return_value.to_dict.return_value = test_excel
+    assert reader_excel('').to_dict() == test_excel.to_dict()
