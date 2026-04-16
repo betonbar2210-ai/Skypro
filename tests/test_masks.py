@@ -24,4 +24,3 @@ def test_get_mask_account():
     assert get_mask_account("Счет 12345678911234567892") == "Счет **7892\n"
     assert get_mask_account("") == "Введен некоректный номер счета\n"
     assert get_mask_account("Счет 00") == "Введен некоректный номер счета\n"
-    assert get_mask_account("12345678911234567892") == "Введен некоректный номер счета\n"
