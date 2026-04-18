@@ -1,0 +1,6 @@
+Функция log_in_file_error error:
+Exception: 
+Inputs:
+(), {'bool': True}
+Время выполнения: 2.6226043701171875e-06
+

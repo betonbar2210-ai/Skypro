@@ -14,7 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger("utils")
 
 
-def read_json(way_file: str)-> list:
+def read_json(way_file: str) -> list:
     """Функция преобразования JSON файла в python"""
     try:
         logger.info("Файл успешно преобразован")
