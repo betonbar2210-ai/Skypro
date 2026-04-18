@@ -1,9 +1,8 @@
-from numpy.f2py.f2py2e import filter_files
-
 from src.output_of_categories import process_bank_search
 from src.processing import filter_by_state, sort_by_date
 from src.reader_csv_xlsl import reader_csv, reader_excel
 from src.utils import read_json
+
 
 def read_file():
     """Чтение файлов на выбор JSON, CSV, EXCEL"""
