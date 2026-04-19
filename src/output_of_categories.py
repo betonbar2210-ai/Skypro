@@ -1,4 +1,7 @@
 import re
+from collections import Counter
+
+from tests.conftest import utils_json, test_csv
 
 
 def process_bank_search(test_csv, search):
@@ -12,15 +15,16 @@ def process_bank_search(test_csv, search):
 
 
 def process_bank_operations(data: list[dict], categories: list) -> dict:
-    """Функция сортировки списка словорей и вывод
-    Словаря в формате Категория : количество операций"""
-    category_counts = {}
-    for category in categories:
-        category_counts[category] = 0
+    """Функция сортировки списка словарей и вывод
+    Словаря в формате Категория: количество операций"""
+    category_count = []
     for operation in data:
-        description = operation.get("description")
-        for category in categories:
-            if category in description:
-                category_counts[description] += 1
+        for cat in categories:
+            if cat in operation.get("description"):
+                category_count.append(operation["description"])
                 break
-    return category_counts
+    count_dict = Counter(category_count)
+    return count_dict
+
+
+
