@@ -1,14 +1,13 @@
 import re
+
 from collections import Counter
 
-from tests.conftest import utils_json, test_csv
 
-
-def process_bank_search(test_csv, search):
-    """Функция фильтрации списка словорей по строке поиска"""
+def process_bank_search(data, search):
+    """Функция фильтрации списка словарей по строке поиска"""
     pattern = re.compile(search, re.IGNORECASE)
     filtered_data = []
-    for operation in test_csv:
+    for operation in data:
         if "description" in operation and pattern.search(operation["description"]):
             filtered_data.append(operation)
     return filtered_data
@@ -25,6 +24,3 @@ def process_bank_operations(data: list[dict], categories: list) -> dict:
                 break
     count_dict = Counter(category_count)
     return count_dict
-
-
-

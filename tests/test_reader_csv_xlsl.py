@@ -3,7 +3,7 @@ import os
 from unittest.mock import Mock, patch
 
 from config import ROOT_DIR
-from src.reader_csv_xlsl import reader_excel, reader_csv
+from src.reader_csv_xlsl import reader_csv, reader_excel
 
 
 def test_reader_csv(test_csv):

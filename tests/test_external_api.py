@@ -1,5 +1,6 @@
-from src.external_api import conversion
 from unittest.mock import patch
+
+from src.external_api import conversion
 
 
 @patch("requests.get")
