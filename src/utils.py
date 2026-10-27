@@ -14,13 +14,13 @@ logging.basicConfig(
 logger = logging.getLogger("utils")
 
 
-def read_json(way_file: str):
+def read_json(way_file: str) -> list:
     """Функция преобразования JSON файла в python"""
     try:
         logger.info("Файл успешно преобразован")
         with open(way_file, encoding="utf-8") as f:
             transaction = json.load(f)
-        return transaction
+        return list(transaction)
     except json.JSONDecodeError as e:
         logger.error(f"Error: {e}")
         print(f"{e}")
